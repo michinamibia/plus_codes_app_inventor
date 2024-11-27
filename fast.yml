@@ -1,0 +1,51 @@
+# The name of the extension developer
+author: Michael Frey
+# The minimum Android SDK level your extension supports. Minimum SDK defined in
+# AndroidManifest.xml or @DesignerComponent are ignored, you should always define it here.
+min_sdk: 7
+
+# If enabled, it will optimizes the extension with ProGuard.
+proguard: true
+# If enabled, Kotlin Standard Libraries (V1.9.24) will be included with the extension.
+# If you want to add specific Kotlin Standard Libraries so disable it.
+kotlin: false
+
+# If enabled, you will be able to use Java 8 language features in your extension source code.
+desugar_sources: false
+# Enable it, if any of your dependencies use Java 8 language features.
+desugar_deps: false
+# If enabled, the D8 tool will generate desugared (classes.jar) classes.dex
+desugar_dex: true
+
+# Default repositories are Maven Central, Google Maven, JCenter and JitPack.
+# If the library you want to use is not available in these repositories, add here by specifying their URLs.
+# repositories:
+# - https://repo.spring.io/plugins-release/
+
+# Extension dependencies [JAR & AAR Should be present into deps directory]
+dependencies:
+ - openlocationcode-1.0.4.jar
+# - androidx.recyclerview:recyclerview:1.0.0
+
+# Define compile-time dependencies only [Remote only]
+# compile_time:
+# - androidx.viewpager2:viewpager2:1.0.0
+
+# Define dependencies those are should be skipped during resolving. [Remote only]
+# excludes:
+# - androidx.recyclerview:recyclerview:1.0.0
+
+# Extension assets. [Should be present into assets directory]
+#assets:
+#- my-awesome-asset.anything
+
+# If enabled, the version number of every component will be increased automatically.
+auto_version: true
+# If enabled, @annotations will be not present in built extension.
+deannonate: true
+# If enabled, matching classes provided by MIT will not be included in the built extension.
+filter_mit_classes: false
+
+# If enabled, R8 will be used instead of ProGuard and D8 dexer.
+# NOTE: It's an experimental feature.
+# R8: false
